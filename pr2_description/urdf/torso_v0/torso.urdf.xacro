@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-  <xacro:include filename="$(find pr2_description)/urdf/torso_v0/torso.gazebo.xacro" />
-  <xacro:include filename="$(find pr2_description)/urdf/torso_v0/torso.transmission.xacro" />
-  <xacro:include filename="$(find pr2_description)/urdf/sensors/microstrain_3dmgx2_imu.urdf.xacro" />
+  <xacro:include filename="$(find moveit_resources_pr2_description)/urdf/torso_v0/torso.gazebo.xacro" />
+  <xacro:include filename="$(find moveit_resources_pr2_description)/urdf/torso_v0/torso.transmission.xacro" />
+  <xacro:include filename="$(find moveit_resources_pr2_description)/urdf/sensors/microstrain_3dmgx2_imu.urdf.xacro" />
 
   <xacro:macro name="pr2_torso_v0" params="name parent *origin torso_calib_ref:=0.0">
     <joint name="${name}_joint" type="prismatic">
@@ -35,7 +35,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://pr2_description/meshes/torso_v0/torso_lift.dae"  />
+          <mesh filename="package://moveit_resources_pr2_description/meshes/torso_v0/torso_lift.dae"  />
         </geometry>
         
         <material name="Grey2" />
@@ -44,7 +44,7 @@
       <collision name="${name}_collision">
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://pr2_description/meshes/torso_v0/torso_lift_L.stl"  />
+          <mesh filename="package://moveit_resources_pr2_description/meshes/torso_v0/torso_lift_L.stl"  />
         </geometry>
       </collision>
     </link>

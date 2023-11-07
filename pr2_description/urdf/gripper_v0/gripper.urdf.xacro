@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-  <xacro:include filename="$(find pr2_description)/urdf/gripper_v0/gripper.gazebo.xacro" />
-  <xacro:include filename="$(find pr2_description)/urdf/gripper_v0/gripper.transmission.xacro" />
+  <xacro:include filename="$(find moveit_resources_pr2_description)/urdf/gripper_v0/gripper.gazebo.xacro" />
+  <xacro:include filename="$(find moveit_resources_pr2_description)/urdf/gripper_v0/gripper.transmission.xacro" />
 
   <xacro:property name="M_PI" value="3.1415926535897931" />
 
@@ -57,7 +57,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://pr2_description/meshes/gripper_v0/l_finger.dae" />
+          <mesh filename="package://moveit_resources_pr2_description/meshes/gripper_v0/l_finger.dae" />
         </geometry>
         
         <material name="Grey" />
@@ -65,7 +65,7 @@
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://pr2_description/meshes/gripper_v0/l_finger.stl" />
+          <mesh filename="package://moveit_resources_pr2_description/meshes/gripper_v0/l_finger.stl" />
         </geometry>
       </collision>
     </link>
@@ -97,7 +97,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="${M_PI} 0 0" />
         <geometry>
-          <mesh filename="package://pr2_description/meshes/gripper_v0/l_finger.dae" />
+          <mesh filename="package://moveit_resources_pr2_description/meshes/gripper_v0/l_finger.dae" />
         </geometry>
         
         <material name="Grey" />
@@ -105,7 +105,7 @@
       <collision>
         <origin xyz="0 0 0" rpy="${M_PI} 0 0" />
         <geometry>
-          <mesh filename="package://pr2_description/meshes/gripper_v0/l_finger.stl" />
+          <mesh filename="package://moveit_resources_pr2_description/meshes/gripper_v0/l_finger.stl" />
         </geometry>
       </collision>
     </link>
@@ -134,7 +134,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://pr2_description/meshes/gripper_v0/l_finger_tip.dae" />
+          <mesh filename="package://moveit_resources_pr2_description/meshes/gripper_v0/l_finger_tip.dae" />
         </geometry>
         
         <material name="Green" />
@@ -142,7 +142,7 @@
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://pr2_description/meshes/gripper_v0/l_finger_tip.stl" />
+          <mesh filename="package://moveit_resources_pr2_description/meshes/gripper_v0/l_finger_tip.stl" />
         </geometry>
       </collision>
     </link>
@@ -171,7 +171,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="${M_PI} 0 0" />
         <geometry>
-          <mesh filename="package://pr2_description/meshes/gripper_v0/l_finger_tip.dae"  />
+          <mesh filename="package://moveit_resources_pr2_description/meshes/gripper_v0/l_finger_tip.dae"  />
         </geometry>
         
         <material name="Green" />
@@ -179,7 +179,7 @@
       <collision>
         <origin xyz="0 0 0" rpy="${M_PI} 0 0" />
         <geometry>
-          <mesh filename="package://pr2_description/meshes/gripper_v0/l_finger_tip.stl"  />
+          <mesh filename="package://moveit_resources_pr2_description/meshes/gripper_v0/l_finger_tip.stl"  />
         </geometry>
       </collision>
     </link>
@@ -209,7 +209,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://pr2_description/meshes/gripper_v0/gripper_palm.dae"  />
+          <mesh filename="package://moveit_resources_pr2_description/meshes/gripper_v0/gripper_palm.dae"  />
         </geometry>
         
         <material name="Red" />
@@ -217,7 +217,7 @@
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://pr2_description/meshes/gripper_v0/gripper_palm.stl"  />
+          <mesh filename="package://moveit_resources_pr2_description/meshes/gripper_v0/gripper_palm.stl"  />
         </geometry>
       </collision>
     </link>

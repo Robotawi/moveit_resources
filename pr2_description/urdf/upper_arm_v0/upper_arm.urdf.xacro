@@ -5,9 +5,9 @@
 
   <!-- Things that are needed only for Gazebo (not the physical robot).  These include
        sensor and controller plugin specifications -->
-  <xacro:include filename="$(find pr2_description)/urdf/upper_arm_v0/upper_arm.gazebo.xacro" />
-  <xacro:include filename="$(find pr2_description)/urdf/upper_arm_v0/upper_arm.transmission.xacro" />
-  <xacro:include filename="$(find pr2_description)/urdf/common.xacro" />
+  <xacro:include filename="$(find moveit_resources_pr2_description)/urdf/upper_arm_v0/upper_arm.gazebo.xacro" />
+  <xacro:include filename="$(find moveit_resources_pr2_description)/urdf/upper_arm_v0/upper_arm.transmission.xacro" />
+  <xacro:include filename="$(find moveit_resources_pr2_description)/urdf/common.xacro" />
 
   <!-- Inertial properties differ slightly for left vs right arm -->
   <xacro:property name="uar_xyz1" value= "0.21398" />
@@ -58,7 +58,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://pr2_description/meshes/upper_arm_v0/upper_arm.dae"  />
+          <mesh filename="package://moveit_resources_pr2_description/meshes/upper_arm_v0/upper_arm.dae"  />
         </geometry>
 
         <material name="Green" />
@@ -67,7 +67,7 @@
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://pr2_description/meshes/upper_arm_v0/upper_arm.stl"  />
+          <mesh filename="package://moveit_resources_pr2_description/meshes/upper_arm_v0/upper_arm.stl"  />
         </geometry>
       </collision>
 
@@ -117,7 +117,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://pr2_description/meshes/upper_arm_v0/elbow_flex.dae"  />
+          <mesh filename="package://moveit_resources_pr2_description/meshes/upper_arm_v0/elbow_flex.dae"  />
         </geometry>
 
         <material name="Grey" />
@@ -126,7 +126,7 @@
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://pr2_description/meshes/upper_arm_v0/elbow_flex.stl"  />
+          <mesh filename="package://moveit_resources_pr2_description/meshes/upper_arm_v0/elbow_flex.stl"  />
         </geometry>
       </collision>
     </link>
@@ -169,7 +169,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://pr2_description/meshes/upper_arm_v0/forearm_roll.stl"  />
+          <mesh filename="package://moveit_resources_pr2_description/meshes/upper_arm_v0/forearm_roll.stl"  />
         </geometry>
 
         <material name="RollLinks" />
@@ -178,7 +178,7 @@
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://pr2_description/meshes/upper_arm_v0/forearm_roll_L.stl"  />
+          <mesh filename="package://moveit_resources_pr2_description/meshes/upper_arm_v0/forearm_roll_L.stl"  />
         </geometry>
       </collision>
     </link>

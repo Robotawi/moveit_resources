@@ -2,8 +2,8 @@
 
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-  <xacro:include filename="$(find pr2_description)/urdf/head_v0/head.gazebo.xacro" />
-  <xacro:include filename="$(find pr2_description)/urdf/head_v0/head.transmission.xacro" />
+  <xacro:include filename="$(find moveit_resources_pr2_description)/urdf/head_v0/head.gazebo.xacro" />
+  <xacro:include filename="$(find moveit_resources_pr2_description)/urdf/head_v0/head.transmission.xacro" />
 
   <xacro:property name="M_PI" value="3.1415926535897931" />
 
@@ -29,7 +29,7 @@
       <visual>
         <origin xyz="0 0 0.0" rpy="0 0 0 " />
         <geometry>
-          <mesh filename="package://pr2_description/meshes/head_v0/head_pan.dae"  />
+          <mesh filename="package://moveit_resources_pr2_description/meshes/head_v0/head_pan.dae"  />
         </geometry>
         
         <material name="Blue" />
@@ -37,7 +37,7 @@
 
       <collision>
         <geometry>
-          <mesh filename="package://pr2_description/meshes/head_v0/head_pan_L.stl"  />
+          <mesh filename="package://moveit_resources_pr2_description/meshes/head_v0/head_pan_L.stl"  />
         </geometry>
       </collision>
 
@@ -80,7 +80,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0.0 0.0 0.0" />
         <geometry>
-          <mesh filename="package://pr2_description/meshes/head_v0/head_tilt.dae"  />
+          <mesh filename="package://moveit_resources_pr2_description/meshes/head_v0/head_tilt.dae"  />
         </geometry>
         
         <material name="Green" />
@@ -89,7 +89,7 @@
       <collision>
         <origin xyz="0 0 0" rpy="0.0 0.0 0.0" />
         <geometry>
-          <mesh filename="package://pr2_description/meshes/head_v0/head_tilt_L.stl"  />
+          <mesh filename="package://moveit_resources_pr2_description/meshes/head_v0/head_tilt_L.stl"  />
         </geometry>
       </collision>
     </link>

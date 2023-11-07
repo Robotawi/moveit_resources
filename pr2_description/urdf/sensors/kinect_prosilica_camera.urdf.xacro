@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <root xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-  <xacro:include filename="$(find pr2_description)/urdf/sensors/kinect_prosilica_camera.gazebo.xacro" />
+  <xacro:include filename="$(find moveit_resources_pr2_description)/urdf/sensors/kinect_prosilica_camera.gazebo.xacro" />
 
   <xacro:property name="ir_depth_rgb_offset_y" value="0.01"/> <!-- FIXME: what is this offset? -->
 
@@ -26,7 +26,7 @@
       <visual>
         <origin xyz="0.0 0.0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://pr2_description/meshes/sensors/kinect_prosilica_v0/115x100_swept_back--coarse.STL" scale="0.001 0.001 0.001" />
+          <mesh filename="package://moveit_resources_pr2_description/meshes/sensors/kinect_prosilica_v0/115x100_swept_back--coarse.STL" scale="0.001 0.001 0.001" />
         </geometry>
         <material name="gray">
           <color rgba="0.5 0.5 0.5 1"/>

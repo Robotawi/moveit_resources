@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-  <xacro:include filename="$(find pr2_description)/urdf/sensors/hokuyo_lx30_laser.urdf.xacro" />
-  <xacro:include filename="$(find pr2_description)/urdf/base_v0/base.gazebo.xacro" />
-  <xacro:include filename="$(find pr2_description)/urdf/base_v0/base.transmission.xacro" />
+  <xacro:include filename="$(find moveit_resources_pr2_description)/urdf/sensors/hokuyo_lx30_laser.urdf.xacro" />
+  <xacro:include filename="$(find moveit_resources_pr2_description)/urdf/base_v0/base.gazebo.xacro" />
+  <xacro:include filename="$(find moveit_resources_pr2_description)/urdf/base_v0/base.transmission.xacro" />
 
   <!-- DATA SOURCES -->
   <!-- all link offsets, CG, limits are obtained from Function Engineering spreadsheet 090224_link_data.xls unless stated otherwise -->
@@ -64,7 +64,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://pr2_description/meshes/base_v0/wheel.dae" />
+          <mesh filename="package://moveit_resources_pr2_description/meshes/base_v0/wheel.dae" />
         </geometry>
         
         <material name="Wheel_${suffix}" />
@@ -107,7 +107,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://pr2_description/meshes/base_v0/caster.stl" />
+          <mesh filename="package://moveit_resources_pr2_description/meshes/base_v0/caster.stl" />
         </geometry>
         
         <material name="Caster" />
@@ -116,7 +116,7 @@
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://pr2_description/meshes/base_v0/caster_L.stl" />
+          <mesh filename="package://moveit_resources_pr2_description/meshes/base_v0/caster_L.stl" />
         </geometry>
       </collision>
     </link>
@@ -155,7 +155,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://pr2_description/meshes/base_v0/base.dae" />
+          <mesh filename="package://moveit_resources_pr2_description/meshes/base_v0/base.dae" />
         </geometry>
         
         <material name="White" />
@@ -164,7 +164,7 @@
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://pr2_description/meshes/base_v0/base_L.stl" />
+          <mesh filename="package://moveit_resources_pr2_description/meshes/base_v0/base_L.stl" />
         </geometry>
       </collision>
     </link>

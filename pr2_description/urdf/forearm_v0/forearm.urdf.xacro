@@ -5,9 +5,9 @@
 
   <!-- Things that are needed only for Gazebo (not the physical robot).  These include
        sensor and controller plugin specifications -->
-  <xacro:include filename="$(find pr2_description)/urdf/forearm_v0/forearm.gazebo.xacro" />
-  <xacro:include filename="$(find pr2_description)/urdf/forearm_v0/forearm.transmission.xacro" />
-  <xacro:include filename="$(find pr2_description)/urdf/common.xacro" />
+  <xacro:include filename="$(find moveit_resources_pr2_description)/urdf/forearm_v0/forearm.gazebo.xacro" />
+  <xacro:include filename="$(find moveit_resources_pr2_description)/urdf/forearm_v0/forearm.transmission.xacro" />
+  <xacro:include filename="$(find moveit_resources_pr2_description)/urdf/common.xacro" />
 
   <!-- ============================   Forearm   ============================ -->
 
@@ -32,7 +32,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://pr2_description/meshes/forearm_v0/forearm.dae" />
+          <mesh filename="package://moveit_resources_pr2_description/meshes/forearm_v0/forearm.dae" />
        </geometry>
 
         <material name="Grey" />
@@ -41,7 +41,7 @@
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://pr2_description/meshes/forearm_v0/forearm.stl" />
+          <mesh filename="package://moveit_resources_pr2_description/meshes/forearm_v0/forearm.stl" />
         </geometry>
       </collision>
     </link>
@@ -77,7 +77,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://pr2_description/meshes/forearm_v0/wrist_flex.dae" />
+          <mesh filename="package://moveit_resources_pr2_description/meshes/forearm_v0/wrist_flex.dae" />
         </geometry>
 
         <material name="Grey" />
@@ -86,7 +86,7 @@
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://pr2_description/meshes/forearm_v0/wrist_flex.stl" />
+          <mesh filename="package://moveit_resources_pr2_description/meshes/forearm_v0/wrist_flex.stl" />
         </geometry>
       </collision>
     </link>
@@ -121,7 +121,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://pr2_description/meshes/forearm_v0/wrist_roll.stl" />
+          <mesh filename="package://moveit_resources_pr2_description/meshes/forearm_v0/wrist_roll.stl" />
         </geometry>
 
         <material name="RollLinks" />
@@ -129,7 +129,7 @@
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://pr2_description/meshes/forearm_v0/wrist_roll_L.stl" />
+          <mesh filename="package://moveit_resources_pr2_description/meshes/forearm_v0/wrist_roll_L.stl" />
         </geometry>
       </collision>
     </link>

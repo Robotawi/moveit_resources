@@ -5,9 +5,9 @@
 
   <!-- Things that are needed only for Gazebo (not the physical robot).  These include
        sensor and controller plugin specifications -->
-  <xacro:include filename="$(find pr2_description)/urdf/shoulder_v0/shoulder.gazebo.xacro" />
-  <xacro:include filename="$(find pr2_description)/urdf/shoulder_v0/shoulder.transmission.xacro" />
-  <xacro:include filename="$(find pr2_description)/urdf/common.xacro" />
+  <xacro:include filename="$(find moveit_resources_pr2_description)/urdf/shoulder_v0/shoulder.gazebo.xacro" />
+  <xacro:include filename="$(find moveit_resources_pr2_description)/urdf/shoulder_v0/shoulder.transmission.xacro" />
+  <xacro:include filename="$(find moveit_resources_pr2_description)/urdf/common.xacro" />
 
   <xacro:property name="shoulder_lift_length" value="0.10" />  <!--TODO Define and give source-->
   <xacro:property name="shoulder_lift_radius" value="0.12" />  <!--TODO Define and give source-->
@@ -56,7 +56,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://pr2_description/meshes/shoulder_v0/shoulder_pan.dae"  />
+          <mesh filename="package://moveit_resources_pr2_description/meshes/shoulder_v0/shoulder_pan.dae"  />
         </geometry>
         <material name="Blue" />
       </visual>
@@ -64,7 +64,7 @@
       <collision>
         <origin xyz="0.0 0 0.0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://pr2_description/meshes/shoulder_v0/shoulder_pan.stl"  />
+          <mesh filename="package://moveit_resources_pr2_description/meshes/shoulder_v0/shoulder_pan.stl"  />
         </geometry>
       </collision>
     </link>
@@ -104,7 +104,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://pr2_description/meshes/shoulder_v0/shoulder_lift.dae"  />
+          <mesh filename="package://moveit_resources_pr2_description/meshes/shoulder_v0/shoulder_lift.dae"  />
         </geometry>
         <material name="Grey" />
       </visual>
@@ -112,7 +112,7 @@
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://pr2_description/meshes/shoulder_v0/shoulder_lift.stl"  />
+          <mesh filename="package://moveit_resources_pr2_description/meshes/shoulder_v0/shoulder_lift.stl"  />
         </geometry>
       </collision>
     </link>
@@ -164,7 +164,7 @@
         <!-- TODO: This component doesn't actually have a mesh -->
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://pr2_description/meshes/shoulder_v0/upper_arm_roll.stl"  />
+          <mesh filename="package://moveit_resources_pr2_description/meshes/shoulder_v0/upper_arm_roll.stl"  />
         </geometry>
 
         <material name="RollLinks" />
@@ -172,7 +172,7 @@
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://pr2_description/meshes/shoulder_v0/upper_arm_roll_L.stl"  />
+          <mesh filename="package://moveit_resources_pr2_description/meshes/shoulder_v0/upper_arm_roll_L.stl"  />
         </geometry>
       </collision>
     </link>

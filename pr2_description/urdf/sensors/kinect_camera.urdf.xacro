@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
   
-  <xacro:include filename="$(find pr2_description)/urdf/sensors/kinect_camera.gazebo.xacro" />
+  <xacro:include filename="$(find moveit_resources_pr2_description)/urdf/sensors/kinect_camera.gazebo.xacro" />
 
   <xacro:macro name="kinect_camera_v0" params="name parent *origin">
     <joint name="${name}_frame_joint" type="fixed">
@@ -22,14 +22,14 @@
       <visual>
         <origin xyz="0.0 0.012 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://pr2_description/meshes/sensors/kinect_v0/kinect.dae" scale="0.001 0.001 0.001" />
+          <mesh filename="package://moveit_resources_pr2_description/meshes/sensors/kinect_v0/kinect.dae" scale="0.001 0.001 0.001" />
         </geometry>
       </visual>
 
       <collision>
         <origin xyz="0.0 0.012 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://pr2_description/meshes/sensors/kinect_v0/kinect.dae" scale="0.001 0.001 0.001" />
+          <mesh filename="package://moveit_resources_pr2_description/meshes/sensors/kinect_v0/kinect.dae" scale="0.001 0.001 0.001" />
         </geometry>
       </collision>
 
