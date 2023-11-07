@@ -1,8 +1,6 @@
 <?xml version="1.0"?>
 <root xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-  <xacro:include filename="$(find moveit_resources_pr2_description)/urdf/sensors/kinect_prosilica_camera.gazebo.xacro" />
-
   <xacro:property name="ir_depth_rgb_offset_y" value="0.01"/> <!-- FIXME: what is this offset? -->
 
   <!-- kinect and prosilica combo -->
@@ -81,11 +79,6 @@
     </joint>
 
     <link name="${name}_kinect_ir_optical_frame"/>
-    <!-- gazebo extensions -->
-    <xacro:kinect_ir_gazebo_v0 link_name="${name}_kinect_ir_link" frame_name="${name}_kinect_ir_optical_frame" camera_name="head_mount_kinect" />
-
-
-
 
     <!-- kinect rgb sensor physical attachment -->
     <joint name="${name}_kinect_rgb_joint" type="fixed">
@@ -125,13 +118,7 @@
     </joint>
 
     <link name="${name}_kinect_rgb_optical_frame"/>
-    <!-- gazebo extensions -->
-    <xacro:kinect_rgb_gazebo_v0 link_name="${name}_kinect_rgb_link" frame_name="${name}_kinect_rgb_optical_frame" camera_name="head_mount_kinect" />
-
-
-
-
-
+  
     <!-- prosilica sensor physical attachment -->
     <joint name="${name}_prosilica_joint" type="fixed">
       <origin xyz="-0.046457 0.0125 0.088921" rpy="0 0 0"/>
@@ -168,9 +155,6 @@
     </joint>
 
     <link name="${name}_prosilica_optical_frame"/>
-    <!-- gazebo extensions -->
-    <xacro:prosilica_cam_gazebo_v1 link_name="${name}_prosilica_link" camera_name="prosilica_camera" frame_name="${name}_prosilica_optical_frame" />
-
   </xacro:macro>
 
 

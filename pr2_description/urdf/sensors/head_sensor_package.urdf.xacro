@@ -6,7 +6,7 @@
        prosilica
        double stereo camera
   -->
-  <xacro:include filename="$(find moveit_resources_pr2_description)/urdf/sensors/head_sensor_package.gazebo.xacro" />
+  
   <xacro:include filename="$(find moveit_resources_pr2_description)/urdf/sensors/double_stereo_camera.urdf.xacro" />
   <xacro:include filename="$(find moveit_resources_pr2_description)/urdf/sensors/prosilica_gc2450_camera.urdf.xacro" />
 
@@ -40,9 +40,6 @@
     <xacro:double_stereo_camera_v0 name="${stereo_name}" parent="${name}_link" >
       <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
     </xacro:double_stereo_camera_v0>
-
-    <!-- extensions -->
-    <xacro:pr2_head_sensor_package_gazebo_v0 name="${name}" />
 
   </xacro:macro>
 

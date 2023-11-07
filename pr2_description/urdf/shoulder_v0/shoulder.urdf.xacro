@@ -3,10 +3,6 @@
 <!-- XML namespaces -->
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-  <!-- Things that are needed only for Gazebo (not the physical robot).  These include
-       sensor and controller plugin specifications -->
-  <xacro:include filename="$(find moveit_resources_pr2_description)/urdf/shoulder_v0/shoulder.gazebo.xacro" />
-  <xacro:include filename="$(find moveit_resources_pr2_description)/urdf/shoulder_v0/shoulder.transmission.xacro" />
   <xacro:include filename="$(find moveit_resources_pr2_description)/urdf/common.xacro" />
 
   <xacro:property name="shoulder_lift_length" value="0.10" />  <!--TODO Define and give source-->
@@ -123,10 +119,6 @@
       <origin xyz="0 0 0" rpy="0 0 0" />
     </xacro:pr2_upper_arm_roll_v0>
 
-    <!-- extensions -->
-    <xacro:pr2_shoulder_gazebo_v0 side="${side}" />
-    <xacro:pr2_shoulder_transmission_v0 side="${side}" />
-
   </xacro:macro>
 
   <!-- Upperarm roll: internal fixed attchment point for upper arm -->
@@ -177,10 +169,6 @@
       </collision>
     </link>
 
-    <!-- extensions -->
-    <xacro:pr2_upper_arm_roll_gazebo_v0 side="${side}" />
-    <xacro:pr2_upper_arm_roll_transmission_v0 side="${side}" />
-    
   </xacro:macro>
 
 </robot>

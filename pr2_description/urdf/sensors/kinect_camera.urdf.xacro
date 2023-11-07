@@ -1,8 +1,6 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
   
-  <xacro:include filename="$(find moveit_resources_pr2_description)/urdf/sensors/kinect_camera.gazebo.xacro" />
-
   <xacro:macro name="kinect_camera_v0" params="name parent *origin">
     <joint name="${name}_frame_joint" type="fixed">
       <xacro:insert_block name="origin" />
@@ -44,8 +42,6 @@
 
     <link name="${name}_optical_frame"/>
 
-    <!-- extensions -->
-    <xacro:kinect_camera_gazebo_v0 name="${name}" />
   </xacro:macro>
 
 </robot>

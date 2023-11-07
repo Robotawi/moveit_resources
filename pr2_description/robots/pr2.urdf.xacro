@@ -22,10 +22,9 @@
   <xacro:include filename="$(find moveit_resources_pr2_description)/urdf/sensors/head_sensor_package.urdf.xacro" />
   <!-- Camera sensors -->
   <xacro:include filename="$(find moveit_resources_pr2_description)/urdf/sensors/wge100_camera.urdf.xacro" />
+  <xacro:include filename="$(find moveit_resources_pr2_description)/urdf/sensors/stereo_camera.urdf.xacro" />
   <!-- Texture projector -->
   <xacro:include filename="$(find moveit_resources_pr2_description)/urdf/sensors/projector_wg6802418.urdf.xacro" />
-  <!-- generic simulator_gazebo plugins for starting mechanism control, ros time, ros battery -->
-  <xacro:include filename="$(find moveit_resources_pr2_description)/gazebo/gazebo.urdf.xacro" />
   <!-- materials for visualization -->
   <xacro:include filename="$(find moveit_resources_pr2_description)/urdf/materials.urdf.xacro" />
 

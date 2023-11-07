@@ -1,8 +1,6 @@
 <?xml version="1.0"?>
 <root xmlns:xacro="http://www.ros.org/wiki/xacro">
   
-  <xacro:include filename="$(find moveit_resources_pr2_description)/urdf/sensors/prosilica_gc2450_camera.gazebo.xacro" />
-
   <xacro:macro name="prosilica_cam_v0" params="frame_name parent *origin camera_name">
     <joint name="${frame_name}_frame_joint" type="fixed">
       <xacro:insert_block name="origin" />
@@ -39,8 +37,6 @@
 
     </link>
 
-    <!-- extensions -->
-    <xacro:prosilica_cam_gazebo_v0 camera_name="${camera_name}" frame_name="${frame_name}" />
   </xacro:macro>
 
 </root>

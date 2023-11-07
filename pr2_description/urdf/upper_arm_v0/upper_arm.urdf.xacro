@@ -3,10 +3,6 @@
 <!-- XML namespaces -->
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-  <!-- Things that are needed only for Gazebo (not the physical robot).  These include
-       sensor and controller plugin specifications -->
-  <xacro:include filename="$(find moveit_resources_pr2_description)/urdf/upper_arm_v0/upper_arm.gazebo.xacro" />
-  <xacro:include filename="$(find moveit_resources_pr2_description)/urdf/upper_arm_v0/upper_arm.transmission.xacro" />
   <xacro:include filename="$(find moveit_resources_pr2_description)/urdf/common.xacro" />
 
   <!-- Inertial properties differ slightly for left vs right arm -->
@@ -73,10 +69,6 @@
 
     </link>
 
-    <!-- extensions-->
-    <xacro:pr2_upper_arm_gazebo_v0 side="${side}" /> <!-- Has upperarm link -->
-    <!-- No transmission, since this a fixed joint w/o actuator -->
-
     <!-- Elbow flex, FA roll macros -->
     <xacro:pr2_forearm_roll_v0 side="${side}" parent="${side}_elbow_flex_link" reflect="${reflect}"
                                forearm_roll_calib_ref="${forearm_roll_calib_ref}"/>
@@ -131,8 +123,6 @@
       </collision>
     </link>
 
-    <xacro:pr2_elbow_flex_gazebo_v0 side="${side}" />
-    <xacro:pr2_elbow_flex_transmission_v0 side="${side}" />
   </xacro:macro>
   
   <!-- FA roll joint only -->
@@ -182,9 +172,6 @@
         </geometry>
       </collision>
     </link>
-
-    <xacro:pr2_forearm_roll_gazebo_v0 side="${side}" />
-    <xacro:pr2_forearm_roll_transmission_v0 side="${side}" />
   </xacro:macro>
 
 </robot>

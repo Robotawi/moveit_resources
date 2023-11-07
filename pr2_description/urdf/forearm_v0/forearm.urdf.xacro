@@ -5,8 +5,6 @@
 
   <!-- Things that are needed only for Gazebo (not the physical robot).  These include
        sensor and controller plugin specifications -->
-  <xacro:include filename="$(find moveit_resources_pr2_description)/urdf/forearm_v0/forearm.gazebo.xacro" />
-  <xacro:include filename="$(find moveit_resources_pr2_description)/urdf/forearm_v0/forearm.transmission.xacro" />
   <xacro:include filename="$(find moveit_resources_pr2_description)/urdf/common.xacro" />
 
   <!-- ============================   Forearm   ============================ -->
@@ -133,9 +131,6 @@
         </geometry>
       </collision>
     </link>
-    <!-- extensions-->
-    <xacro:pr2_forearm_gazebo_v0 side="${side}" />
-    <xacro:pr2_forearm_transmission_v0 side="${side}" />
 
   </xacro:macro>
 

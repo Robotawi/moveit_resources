@@ -2,9 +2,6 @@
 
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-  <xacro:include filename="$(find moveit_resources_pr2_description)/urdf/head_v0/head.gazebo.xacro" />
-  <xacro:include filename="$(find moveit_resources_pr2_description)/urdf/head_v0/head.transmission.xacro" />
-
   <xacro:property name="M_PI" value="3.1415926535897931" />
 
   <xacro:macro name="pr2_head_pan_v0" params="name parent *origin head_pan_calib_ref:=0.0">
@@ -43,8 +40,6 @@
 
     </link>
 
-    <!-- extensions -->
-    <xacro:pr2_head_pan_transmission_v0 name="${name}" />
   </xacro:macro>
 
 
@@ -94,8 +89,6 @@
       </collision>
     </link>
 
-    <!-- extensions -->
-    <xacro:pr2_head_tilt_transmission_v0 name="${name}" />
   </xacro:macro>
 
 
@@ -144,9 +137,6 @@
       </collision>
     </link>
 
-    <!-- extensions -->
-    <xacro:pr2_head_gazebo_v0 name="${name}" />
-    
   </xacro:macro>
 
 

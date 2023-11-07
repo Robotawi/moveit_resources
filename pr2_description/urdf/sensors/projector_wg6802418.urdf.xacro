@@ -1,8 +1,6 @@
 <?xml version="1.0"?>
 <root xmlns:xacro="http://www.ros.org/wiki/xacro">
   
-  <xacro:include filename="$(find moveit_resources_pr2_description)/urdf/sensors/projector_wg6802418.gazebo.xacro" />
-
   <xacro:macro name="projector_wg6802418_v0" params="name parent *origin">
     <joint name="${name}_frame_joint" type="fixed">
       <xacro:insert_block name="origin" />
@@ -32,8 +30,6 @@
                  izz="0.001" />
       </inertial>
     </link>
-    <!-- extensions -->
-    <xacro:projector_wg6802418_gazebo_v0 name="${name}"/>
   </xacro:macro>
 
 </root>

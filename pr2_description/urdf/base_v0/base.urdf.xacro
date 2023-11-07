@@ -2,8 +2,6 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
   <xacro:include filename="$(find moveit_resources_pr2_description)/urdf/sensors/hokuyo_lx30_laser.urdf.xacro" />
-  <xacro:include filename="$(find moveit_resources_pr2_description)/urdf/base_v0/base.gazebo.xacro" />
-  <xacro:include filename="$(find moveit_resources_pr2_description)/urdf/base_v0/base.transmission.xacro" />
 
   <!-- DATA SOURCES -->
   <!-- all link offsets, CG, limits are obtained from Function Engineering spreadsheet 090224_link_data.xls unless stated otherwise -->
@@ -77,10 +75,6 @@
       </collision>
     </link>
 
-    <!-- extensions -->
-    <xacro:pr2_wheel_gazebo_v0 parent="${parent}" suffix="${suffix}" />
-    <xacro:pr2_wheel_transmission_v0 parent="${parent}" suffix="${suffix}" reflect="${reflect}" />
-
   </xacro:macro>
 
   <!-- Macro for PR2 Caster hub only -->
@@ -121,8 +115,6 @@
       </collision>
     </link>
 
-    <!-- extensions -->
-    <xacro:pr2_caster_transmission_v0 suffix="${suffix}" />
   </xacro:macro>
 
   <xacro:macro name="pr2_caster_v0" params="suffix parent *origin ref_position">
@@ -136,8 +128,6 @@
     <xacro:pr2_wheel_v0 parent="${suffix}_caster" suffix="l" reflect="1" />
     <xacro:pr2_wheel_v0 parent="${suffix}_caster" suffix="r" reflect="-1" />
 
-    <!-- extensions -->
-    <xacro:pr2_caster_gazebo_v0 suffix="${suffix}" />
   </xacro:macro>
 
 
@@ -242,9 +232,6 @@
     <xacro:pr2_caster_v0 suffix="br" parent="${name}_link" ref_position="${cal_caster_br - M_PI / 4 + M_PI}"  >
       <origin xyz="${-caster_offset_x} ${-caster_offset_y} ${caster_offset_z}" rpy="0 0 0" />
     </xacro:pr2_caster_v0>
-
-    <!-- gazebo extensions -->
-    <xacro:pr2_base_gazebo_v0 name="${name}" />
 
   </xacro:macro>
 

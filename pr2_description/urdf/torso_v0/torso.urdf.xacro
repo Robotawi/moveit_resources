@@ -1,8 +1,6 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-  <xacro:include filename="$(find moveit_resources_pr2_description)/urdf/torso_v0/torso.gazebo.xacro" />
-  <xacro:include filename="$(find moveit_resources_pr2_description)/urdf/torso_v0/torso.transmission.xacro" />
   <xacro:include filename="$(find moveit_resources_pr2_description)/urdf/sensors/microstrain_3dmgx2_imu.urdf.xacro" />
 
   <xacro:macro name="pr2_torso_v0" params="name parent *origin torso_calib_ref:=0.0">
@@ -110,10 +108,6 @@
       <child link="${name}_motor_screw_link"/>
       <dynamics damping="0.0001" />
     </joint>
-
-    <!-- extensions -->
-    <xacro:pr2_torso_gazebo_v0 name="${name}" />
-    <xacro:pr2_torso_transmission_v0 name="${name}" />
 
     <!-- imu -->
     <xacro:microstrain_3dmgx2_imu_v0 name="imu" parent="${name}" imu_topic="torso_lift_imu/data" update_rate="100.0" stdev="0.00017" >

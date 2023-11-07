@@ -2,8 +2,6 @@
 
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-  <xacro:include filename="$(find moveit_resources_pr2_description)/urdf/sensors/hokuyo_lx30_laser.gazebo.xacro" />
-
   <xacro:macro name="hokuyo_lx30_laser_v0" params="name parent *origin ros_topic update_rate min_angle max_angle">
     <joint name="${name}_joint" type="fixed">
       <axis xyz="0 1 0" />
@@ -18,7 +16,5 @@
         <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.000001" iyz="0" izz="0.0001" />
       </inertial>
     </link>
-    <!-- gazebo extensions -->
-    <xacro:hokuyo_lx30_laser_gazebo_v0 name="${name}" ros_topic="${ros_topic}" update_rate="${update_rate}" min_angle="${min_angle}" max_angle="${max_angle}" />
   </xacro:macro>
 </robot>
