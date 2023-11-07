@@ -4,5 +4,5 @@ find_package(ament_cmake REQUIRED)
 
 ament_package()
 
-install(DIRECTORY srdf urdf DESTINATION share/${PROJECT_NAME})
+install(DIRECTORY robots srdf urdf meshes materials DESTINATION share/${PROJECT_NAME})
 install(FILES kinect.dae DESTINATION share/${PROJECT_NAME})
